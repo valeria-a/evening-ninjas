@@ -36,5 +36,13 @@
 # print(word6)
 #
 
+# + - /*
+# // %
+total_minutes = int(input("Insert minutes: "))
+# hh:mm
+print(f"{total_minutes//60}:{total_minutes%60}")
+
+
+
 
 
