@@ -1,3 +1,20 @@
+# b1 = True
+# b2 = False
+
+# print(b1 and b2)
+# print(3 and 5)
+
+# print(bool(3))
+# print(bool(0))
+
+# drink_type = "water"
+# # incorrect
+# if drink_type == "beer" or "wine":
+#     print("inside if")
+#
+# if drink_type == "beer" or drink_type == "wine":
+#     print("inside if")
+
 ######
 # string methods
 ######
@@ -7,10 +24,81 @@
 # methods: text.upper()
 
 text = "The sun is shining and the life is beautiful!"
+# print(text[2])
+# print(text[3])
+# print(text[-1])
+# print(text[-5])
+# print(len(text))
+# word = "hello"
+# print(len(word))
+# print(word[len(word)-1])
+# # print(word[5])
+# print(word[-10])
+text = "The sun is shining and the life is beautiful!"
+# print(text[4:10])
+# print(text[-20:-10])
+# print(text[20:])
+# print(text[:20])
+# print(text[4:20:2])
+# print(text[20:4])
+# print(text[20:4:-1])
+# print(text[::-1])
 
+# "/usr/valeria/documents/my_file.txt"
+
+# print("sun" in text)
+# print("Sun" in text)
+# print("!" in text)
+
+
+# print("Hello" + " " + "World")
+#
+# res = "Hello" + " " + "World"
+# print(res)
+
+print("Hello" * 10)
+
+# print("Hello" * "World")
+# print("Hello" * 2.3)
+
+# print("HHHHH" / 3)
 # string slicing
 
 # string methods
+str1 = "baNaNa"
+# str1upper = str1.upper()
+# print(str1upper)
+# print(str1)
+
+# print(str1.lower())
+# print(str1.upper())
+# print(str1.title())
+# print("hello world".title())
+
+# str1 = "baNaNa"
+# str1 = str1.upper()
+
+str1 = "baNaNa"
+# ret_val = str1.find("N")
+# print(ret_val)
+# str1.find("N", ret_val+1)
+# print(str1.find("NaN"))
+# print(str1.find("!"))
+# print(str1.count("a"))
+# str1.strip()
+
+# num = int(input("Insert a num: "))
+# print(num ** 2)
+
+num = input("Insert a num:")
+num = num.strip()
+if num.isdigit():
+    num = int(num)
+    print(num ** 2)
+else:
+    print("Invalid input")
+
+
 #operator in
 # grades = [90, 95, 97, 85]
 # print(50 in grades)
