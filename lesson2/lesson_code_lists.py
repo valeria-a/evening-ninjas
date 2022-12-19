@@ -18,11 +18,21 @@ text = "The sun is shining and the life is beautiful!"
 # print(various[1])
 # print(various[2])
 
-text = "The sun is shining and the life is beautiful!"
-words = text.split(" ")
-print(words)
-print(words[-1])
-print(len(words))
-print(words[9])
+# text = "The sun is shining and the life is beautiful!"
+# words = text.split(" ")
+# print(words)
+# print(words[-1])
+# print(len(words))
+# print(words[9])
 # print(type(words))
 # print(words)
+
+seats = input("Insert seats: ")
+seats_list = seats.split(" ")
+print(seats_list)
+if len(seats_list) > 0:
+    print(len(seats_list[0]), end=" ")
+if len(seats_list) > 1:
+    print(len(seats_list[1]), end=" ")
+if len(seats_list) > 2:
+    print(len(seats_list[2]))
