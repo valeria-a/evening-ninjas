@@ -66,10 +66,19 @@
 
 # while False:
 #     pass
+# //
+# 4000
+# 400
+# 40
+# 4
+# 0
+
+
 
 # ---------------------------------
 # end_of_input = False
 # temp_max = None
+#
 # while not end_of_input:
 #     i = input("Insert num or $ to finish: ")
 #     if i == '$':
@@ -80,8 +89,29 @@
 #             temp_max = num
 #         if num > temp_max:
 #             temp_max = num
-# print("MAx num", temp_max)
-# ------------------
+
+
+# fruits_list = []
+# fruit = ""
+# while fruit != "$":
+#     fruit = input("insert fruit: ")
+#     if fruit == '$':
+#         break
+#     fruits_list.append(fruit)
+# print(fruits_list)
+# print(len(fruits_list))
+
+
+fruits_list = []
+fruit = ""
+while fruit != "$":
+    fruit = input("insert fruit: ")
+    fruits_list.append(fruit)
+# fruits_list.remove('$')
+# fruits_list.pop()
+fruits_list.pop(len(fruits_list)-1)
+print(fruits_list)
+print(len(fruits_list))
 
 # while loop to create a list of something
 
