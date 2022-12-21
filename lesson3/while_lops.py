@@ -1,3 +1,20 @@
+# g1 = int(input("insert grade 1: "))
+# g2 = int(input("insert grade 2: "))
+# g3 = int(input("insert grade 3: "))
+# a = (g1 + g2 + g3) / 3
+# print(a)
+
+# count = 1
+# grades_sum = 0
+# while count <= 10:
+#     grade = int(input("Insert grade: "))
+#     # grades_sum = grades_sum + grade
+#     grades_sum += grade
+#     count += 1
+# print(grades_sum/(count-1))
+# print("bye")
+
+
 # # insert 3 grades and print avg
 # count = 0
 # grades = []
@@ -11,10 +28,27 @@
 # print(f"The avg is: {grades_sum / len(grades)}")
 
 
-# drink_type = input("Insert drink: ").lower().strip()  #beer / wine
+
+# drink_type = input("Insert drink:").lower().strip()  #beer / wine
+#
 # while drink_type not in ["beer", "wine"]:
 #     drink_type = input("Incorrect input. Insert drink: ").lower().strip()
+#
 # print(f"You inserted {drink_type}")
+
+#########
+
+# drink_type = None  #beer / wine
+# while drink_type not in ["beer", "wine"]:
+#     msg = "Incorrect input. Try again: "
+#     if drink_type is None:
+#         msg = "Insert drink: "
+#     drink_type = input(msg).lower().strip()
+#
+# print(f"You inserted {drink_type}")
+
+# while True:
+#     print("hey")
 
 
 # while True:
