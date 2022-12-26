@@ -1,20 +1,28 @@
-# nums = [3, 6, 2, 1, 3, 7, 7]
+fruits = ["banana", "apple", "pear", "ananas", "cherry"]
+
+# filtered_list = []
+# for f in fruits:
+#     if 'a' not in f:
+#         filtered_list.append(f)
 #
-# if nums[0] > nums[1]:
-#     largest, second_largest = nums[0], nums[1]
-# else:
-#     second_largest, largest = nums[0], nums[1]
+# print(filtered_list)
 #
+# for f in fruits:
+#     if "a" in f:
+#         fruits.remove(f)
 #
-# # all the elements in the list are the same
-# if len(nums) == 0 or nums.count(nums[0]) == len(nums):
-#     print('None')
-#
-# for n in nums[2:]:
-#     if n > second_largest:
-#         pass
-#     elif second_largest <= n <= largest:
-#         second_largest = n
-#     # n  second_largest  largest - nothing to do
-#     # second_largest  n  largest => second_largest = n
-#     # second_largest  largest  n =>  second_largest = largest, largest = n
+
+# fruits = ["banana", "apple", "pear", "ananas", "cherry"]
+# 4  ["banana", "apple", "pear", "ananas", "cherry"]
+# 3 ["banana", "apple", "pear",  "cherry"]
+# 2 ["banana", "apple", "cherry"]
+# 1
+for i in range(len(fruits)-1, -1, -1):
+    if "a" in fruits[i]:
+        fruits.pop(i)
+
+# for i in range(len(fruits)):
+#     if "a" in fruits[i]:
+#         fruits.pop(i)
+
+# print(fruits)

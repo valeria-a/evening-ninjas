@@ -38,3 +38,6 @@
 # vegs.append('cucumber')
 # print(vegs)
 # print(products)
+
+# operator is
+#
