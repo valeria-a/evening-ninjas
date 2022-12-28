@@ -92,12 +92,12 @@
 
 
 # fruits_list = []
-# fruit = ""
-# while fruit != "$":
-#     fruit = input("insert fruit: ")
-#     if fruit == '$':
+# fruit1 = ""
+# while fruit1 != "$":
+#     fruit1 = input("insert fruit1: ")
+#     if fruit1 == '$':
 #         break
-#     fruits_list.append(fruit)
+#     fruits_list.append(fruit1)
 # print(fruits_list)
 # print(len(fruits_list))
 
@@ -105,7 +105,7 @@
 fruits_list = []
 fruit = ""
 while fruit != "$":
-    fruit = input("insert fruit: ")
+    fruit = input("insert fruit1: ")
     fruits_list.append(fruit)
 # fruits_list.remove('$')
 # fruits_list.pop()
