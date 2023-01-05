@@ -39,7 +39,29 @@ def bar(num1, *args):
     print("args", args)
     print("args len:", len(args))
 
-my_num = 6
-my_tuple = (4,5,6,78,0)
-bar(my_num, my_tuple)
-bar(my_num, *my_tuple)
+# my_num = 6
+# my_tuple = (4,5,6,78,0)
+# bar(my_num, my_tuple)
+# bar(my_num, *my_tuple)
+
+
+def bar1(num, *args, **kwargs):
+    print("num:", num)
+    print("args", args)
+    print("args len:", len(args))
+    print("kwargs", kwargs)
+    print("kwargs len:", len(kwargs))
+
+bar1(10,
+     "cola", "fanta", "sprite",
+     name="Valeria", year=1987, phone="053763547")
+
+def create_person(**kwargs):
+    person_dict = {}
+    for k, v in kwargs.items():
+        person_dict[k] = v
+    return person_dict
+
+print(create_person(name='Valeria', phone='34345', address='netanya'))
+print(create_person(name='Valeria', phone='34345', address='netanya', year=1987))
+print(create_person(name='Valeria'))
