@@ -1,3 +1,5 @@
+import datetime
+
 car = {
     'manufacturer': 'mazda',
     'model': '3',
@@ -23,7 +25,7 @@ class Car:
     def __init__(self, manufacturer: str, model: str, color: str,
                  tank_capacity: float, fuel_consumption: float):
         print("inside __init__ of Car")
-        self.__color = color
+        self.__colors_list = [color]
         self.__model = model
         self.__manufacturer = manufacturer
         self.__fuel_consumption = fuel_consumption
@@ -39,12 +41,12 @@ class Car:
         return self.__tank_capacity
 
     def get_color(self):
-        return self.__color
+        return self.__colors_list[-1]
 
     def set_color(self, new_color: str) -> bool:
         if new_color == 'silver':
             return False
-        self.__color = new_color
+        self.__colors_list.append(new_color)
         return True
 
     def get_km(self):
