@@ -24,18 +24,29 @@ dog = Dog('doberman', 'black', 'Bruno')
 dog2 = Dog('bulldog', 'white-and-brown', 'Max')
 dog3 = Dog('chihuahua', 'red', 'Daisy')
 
+#
 # cat.make_sound()
 # dog.make_sound()
-#
-# # print(cat.name, dog.name)
-#
+
+# print(cat.name, dog.name)
+
 # animals_list = [cat, dog, dog2, cat2, dog3]
 # for animal in animals_list:
-#     print(animal.name)
+#     # print(animal.name)
 #     animal.make_sound()
 
 
+l1 = [1,2,3]
+l2 = [4,5,6]
+print(l1 + l2)
 
+n1 = 4
+n2 = 7
+print(n1 + n2)
+
+w1 = "Hello "
+w2 = "World"
+print(w1 + w2)
 
 
 
