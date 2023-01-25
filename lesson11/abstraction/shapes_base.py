@@ -23,3 +23,8 @@ class Rectangle(Shape):
 
 class Circle(Shape):
     pass
+
+
+if __name__ == '__main__':
+    s = Shape()
+    print(s.area())

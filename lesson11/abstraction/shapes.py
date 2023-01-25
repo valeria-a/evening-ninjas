@@ -28,13 +28,12 @@ class Rectangle(Shape):
 
         self._height = height
         self._width = width
-        # raise Exception()
 
     def area(self):
-        return self._height * self._width
+        return self._width * self._height
 
     def perimeter(self):
-        return 2 * (self._height + self._width)
+        pass
 
 
 class Circle(Shape):
@@ -52,22 +51,8 @@ class Circle(Shape):
         return 2 * math.pi * self._radius
 
 
-class Abs(ABC):
-    pass
-    # @abstractmethod
-    # def bla(self):
-    #     pass
 
-a = Abs()
-
-
-# class Triangle(Shape):
-#
-#     @staticmethod
-#     def is_valid_triangle(a, b, c):
-
-
-
-# shape = Shape('cm', 'red')
-# rect = Rectangle(5, 7, 'm', 'red')
-# c = Circle(5, 'mm', 'blue')
+if __name__ == '__main__':
+    # s = Shape('mm', 'red')
+    r = Rectangle(3, 4, 'm', 'blue')
+    r.get_color()
