@@ -1,0 +1,2 @@
+# ASCII - 1 byte (8 bits) - 256 different chars
+# UTF-8
