@@ -1,5 +1,6 @@
 import datetime
 import json
+import os
 from json import JSONEncoder
 
 my_dict = {
@@ -32,3 +33,5 @@ with open("weather.json", "w") as f:
 #
 # # print(content['quiz']['sport']['q1']['question'])
 # print(content[1])
+
+# os.remove()
