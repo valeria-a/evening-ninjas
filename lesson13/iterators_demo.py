@@ -1,21 +1,22 @@
-# # drinks = ['coffee', 'tea', 'juice', 'coke']
+drinks = ['coffee', 'tea', 'juice', 'coke']
 # drinks = {'a': 1, 'b':2, 'c':3}
-#
-# for d in drinks:
-#     print(d)
-#
-# # for k, v in drinks.items():
-# #     print(k, v)
-#
-# drinks_iterator = iter(drinks.items())
-# print(type(drinks_iterator))
+
+for d in drinks:
+    print(d)
+
+# for k, v in drinks.items():
+#     print(k, v)
+
+drinks_iterator = iter(drinks)
+print(type(drinks_iterator))
+val = next(drinks_iterator)
+print(val)
 # val = next(drinks_iterator)
 # print(val)
-# val = next(drinks_iterator)
-# print(val)
-# print(next(drinks_iterator))
-# print(next(drinks_iterator))
-# print(next(drinks_iterator))
+print(next(drinks_iterator))
+print(next(drinks_iterator))
+print(next(drinks_iterator))
+print(next(drinks_iterator))
 
 # class MyClass:
 #     # pass
