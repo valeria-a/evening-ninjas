@@ -1,4 +1,4 @@
-
+import csv
 
 words = ["hello", 'hi', "WORLD", "yes", "APPLE", "banana"]
 # filtered_list = []
@@ -7,12 +7,8 @@ words = ["hello", 'hi', "WORLD", "yes", "APPLE", "banana"]
 #         filtered_list.append(w)
 # print(filtered_list)
 
-# def my_filter(filter_func: callable, collection) -> list:
-#     filtered_list = []
-#     for elem in collection:
-#         if filter_func(elem):
-#             filtered_list.append(elem)
-#     return filtered_list
+ret_val = filter(str.islower, words)
+print(list(ret_val))
 
 def filter_words(w: str) -> bool:
     if type(w) != str:
@@ -36,9 +32,18 @@ def filter_words(w: str) -> bool:
 
 
 # result = filter(is_even, [1,2,3,4,5,6,7,8,9,10])
-result = filter(lambda num: num % 2 == 0, [1,2,3,4,5,6,7,8,9,10])
-print(list(result))
+# result = filter(lambda num: num % 2 == 0, range(1, 2000))
+# for n in result:
+#     print(n)
+# print(list(result))
 # tuple(result)
+
+with open("../lesson12/files/data/AAPL.csv") as fh:
+    reader = csv.DictReader(fh)
+    filtered_rows = filter(
+        lambda row: int(row['Date'][-4:]) == 2000, reader)
+
+    print(list(filtered_rows))
 
 
 
