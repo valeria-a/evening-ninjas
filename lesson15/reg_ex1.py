@@ -37,4 +37,83 @@ if __name__ == '__main__':
     print(re.match("^_[a-z]+$", "_sun"))
     print(re.match("[^a-zA-Z0-9]+", "$#^"))
 
+    # escape char
+    print(re.search("cat+", "cattttt"))
+    print(re.search("\+", "c+tglls"))
+    print(re.search("\++", "c++++"))
+
+    #
+
+    """Group extraction"""
+
+    pattern = r"\w+ (and|or) \w+"
+    #
+    m = re.match(pattern, "fred and barney are here")
+    #
+    print(m)
+    #
+    pattern = r"(\w+) (and|or) (\w+)"
+    #
+    m = re.match(pattern, "fred and barney are here")
+    #
+    print(m.group())
+    #
+    print(m.group(1))
+    #
+    print(m.group(2))
+    #
+    print(m.group(3))
+    #
+    # m.groups()
+    #
+    # m.group(4)
+    #
+    # pattern = "([\w]+) (and|or) ([\w]+)"
+    #
+    # m = re.match(pattern, "fred and barney are here")
+    #
+    # m.groups()
+    #
+    # m.group(2, 3, 4, 1, 1, 1)
+    #
+    m = re.match(pattern=r"(\w+)@(\w+)\.([a-z]+)", string="your_name@gmail.com")
+    #
+    print(m.group(1)) # returns 'your_name'
+    print(m.group(2)) # returns 'gmail'
+    print(m.group(3)) # returns 'com'
+    #
+    # m.group(2)
+    #
+    # m.group(0)
+
+
+#
+pattern = r"(\w+) (and|or) (\w+)"
+#
+match = re.search(pattern, "both Alice AND Bob arrived to the show")
+#
+print(match)
+#
+match = re.search(pattern, "both Alice AND Bob arrived to the show", re.IGNORECASE)
+#
+print(match)
+#
+pattern = r"^[\w]+ (and|or) [\w]+"
+#
+my_text = '''
+Alice arrived to the show.
+Next time don't forget to call David or Moshe!
+Alice and Bob arrived to the show.
+'''
+
+# match = re.search(pattern, my_text)
+#
+# print(match)
+#
+match = re.search(pattern, my_text, re.MULTILINE)
+#
+print(match)
+
+match = re.search(pattern, my_text, re.MULTILINE | re.IGNORECASE)
+
 
