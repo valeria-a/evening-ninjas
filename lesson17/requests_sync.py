@@ -17,5 +17,5 @@ if __name__ == '__main__':
     for i in range(100):
         result.append(get_quote(i))
     end = time.time()
-    print(f"Second: {end-start}")
-    # print(result)
+    print(f"Seconds: {end-start}")
+    print(result)
