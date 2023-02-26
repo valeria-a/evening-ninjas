@@ -221,6 +221,126 @@ select id, year_birth, extract(year from now())-year_birth as age
 from superstore_data;
 
 
+select year_birth  from superstore_data
+where year_birth = 
+	(select max(year_birth) from superstore_data);
+
+
+with max_year as (
+	select max(year_birth)
+	from superstore_data
+)
+select * from superstore_data sd 
+where year_birth = (select * from max_year);
+
+
+
+-- CRUD
+
+insert
+	into
+	superstore_data
+(id,
+	year_birth,
+	education)
+values
+(11112,
+'2000',
+'Master');
+
+select * from superstore_data sd 
+where id=11111;
+
+
+
+
+
+
+insert
+	into
+	superstore_data 
+	(id,
+	year_birth,
+	education,
+	marital_status,
+	income,
+	kidhome,
+	teenhome,
+	dt_customer,
+	recency,
+	mntwines,
+	mntfruits,
+	mntmeatproducts,
+	mntfishproducts,
+	mntsweetproducts,
+	mntgoldprods,
+	numdealspurchases,
+	numwebpurchases,
+	numcatalogpurchases,
+	numstorepurchases,
+	numwebvisitsmonth,
+	response,
+	complain)
+values(0,
+0,
+'',
+'',
+0,
+0,
+0,
+'',
+0,
+0,
+0,
+0,
+0,
+0,
+0,
+0,
+0,
+0,
+0,
+0,
+0,
+0);
+
+select * from superstore_data sd ;
+
+insert into superstore_data 
+values (222222, 1999 );
+
+
+
+update
+	superstore_data
+set
+	year_birth = 2000
+where id = 222222;
+
+select * from superstore_data sd where id=222222;
+
+update superstore_data 
+set income = 0
+where income is null;
+
+update superstore_data 
+set
+	recency = 10, numwebvisitsmonth = 100
+where income =0;
+
+
+update superstore_data 
+set
+	education = upper(education)
+where education = 'Master';
+
+
+delete from superstore_data 
+where id = 222222;
+
+
+delete from superstore_data 
+where year_birth = 1970;
 
 
 
