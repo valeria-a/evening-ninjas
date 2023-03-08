@@ -44,8 +44,8 @@ def create_movie():
 # running from commandline or code
 # debugging
 if __name__ == '__main__':
-    # app.run(host='0.0.0.0', port=5555)
-    app.run(debug=True, port=5001)
+    app.run(host='0.0.0.0', port=5002)
+    # app.run(debug=True, port=5001)
 
 
 # path parameter
