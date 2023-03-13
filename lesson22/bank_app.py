@@ -53,8 +53,10 @@ def get_customer(customer_id):
 def update_customer(customer_id):
     new_data = request.form
     updates_str_list = []
+    allowed_fields = ('name', 'address')
     for field in new_data:
-        updates_str_list.append(f"{field}=%s")
+        if field in allowed_fields:
+            updates_str_list.append(f"{field}=%s")
     sql = f"UPDATE customers SET {','.join(updates_str_list)} WHERE id=%s"
     with conn:
         with conn.cursor() as cur:
@@ -64,9 +66,17 @@ def update_customer(customer_id):
                 return app.response_class(status=200)
     return app.response_class(status=500)
 
-@app.route("/api/v1/customers", methods=['GET'])
+# @app.route("/api/v1/account", methods=['POST', 'GET'])
+# def accounts():
+#     if request.method == 'GET':
+#         pass
+#     elif request.method == 'POST':
+#         pass
+
+
+@app.route("/api/v1/customers", methods=['POST'])
 def get_customers():
-    return 'get customers'
+    pass
 
 
 # running from commandline or code
